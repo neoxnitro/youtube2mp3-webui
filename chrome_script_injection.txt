@@ -1,0 +1,10 @@
+on Youtube page:
+
+var link = document.URL;
+
+myButton = document.createElement("input");
+myButton.type = "button";
+myButton.value = "youtube2mp3";
+myButton.setAttribute("onclick", "window.open('http://192.168.0.247/youtube2mp3/index.html?link='+link)");
+placeHolder = document.getElementById("watch-header");
+placeHolder.appendChild(myButton);
