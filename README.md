@@ -10,9 +10,9 @@ It's not the best way to do that but it's an old script i have made a couple of 
 > nano cgi-bin/simple-ajax-send.cgi
 
 Replace "/home/cgi/mp3/" by a path where you want save permanelty the mp3
-N.B if you change the path, don't forget to alose change the path of last step 
+N.B if you change the path, don't forget to alose change the path of last step
 N.B' be sure that this directory is editable by everybody (sudo chmod ugo+rw <directory>)
-
+  
 eyed3 (ID3TAG)
 > sudo apt install eyed3
 
