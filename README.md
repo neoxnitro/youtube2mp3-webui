@@ -1,6 +1,11 @@
 # youtube2mp3-webui
 Webui for youtube-dl in hmtl+cgi
 
+It's not the best way to do that but it's an old script i have made a couple of years ago
+
++Set ID3tag author and title extracted based on youtube video title
++Set ID3tag thumbnail extracted from youtube video thumbnail
+
 [Customize mp3 file destination]
 > nano cgi-bin/simple-ajax-send.cgi
 
