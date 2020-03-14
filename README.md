@@ -6,6 +6,7 @@ Webui for youtube-dl in hmtl+cgi
 
 Replace "/home/cgi/mp3/" by a path where you want save permanelty the mp3
 N.B if you change the path, don't forget to alose change the path of last step 
+N.B' be sure that this directory is editable by everybody (sudo chmod ugo+rw <directory>)
 
 eyed3 (ID3TAG)
 > sudo apt install eyed3
@@ -37,5 +38,7 @@ Install/Update youtube-dl: ... a good thing is to create a cron task to update d
 > sudo /home/cgi/youtube2mp3.sh update
 
 Download from html page:
-> sudo ln -s /home/cgi/mp3/ /var/www/html/MP3
+> sudo ln -s /home/cgi/mp3/ /var/www/html/mp3
 > sudo ln -s /tmp/ /var/www/html/tmp
+
+Replace "/home/cgi/mp3/" by a path where you want save permanelty the mp3

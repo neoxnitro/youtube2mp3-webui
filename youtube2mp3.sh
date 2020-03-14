@@ -10,7 +10,7 @@ function print_color
 
 function display_link
 {
-	echo "</br><a href=\"/MP3/$1\" download>$1</a></br>"
+	echo "</br><a href=\"/mp3/$1\" download>$1</a></br>"
 }
 
 OUT=$(pwd)
@@ -30,15 +30,15 @@ fi
 
 
 
-if [[ ! "$1" == *"watch?v="* ]];then
-	print_color "#9A0800" "ERROR: tag no found: watch?v="
-	exit
-fi
+#if [[ ! "$1" == *"watch?v="* ]];then
+#	print_color "#9A0800" "ERROR: tag no found: watch?v="
+#	exit
+#fi
 
-if [[ ! "$1" == *".youtube.com"* ]];then
-	print_color "#9A0800" "ERROR: tag no found: .youtube.com"
-	exit
-fi
+#if [[ ! "$1" == *".youtube.com"* ]];then
+#	print_color "#9A0800" "ERROR: tag no found: .youtube.com"
+#	exit
+#fi
 
 USER="$3"
 CODE=$4
