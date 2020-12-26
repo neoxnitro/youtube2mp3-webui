@@ -1,4 +1,3 @@
-exit
 
 sudo apt install eyed3
 sudo apt-get install apache2

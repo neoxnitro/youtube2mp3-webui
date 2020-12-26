@@ -81,7 +81,7 @@ print_color "#08088A" "*********************************************************
 
 print_color "#08088A" "Request video information ..."
 
-THUMBNAI="/tmp/$CODE.jpg"
+THUMBNAI="/tmp/$CODE"
 rm -rf "$THUMBNAI"
 youtube-dl --write-thumbnail $LINK -o "$THUMBNAI" > /dev/null &						# background task
 
