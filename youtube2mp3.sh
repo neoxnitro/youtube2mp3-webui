@@ -30,16 +30,6 @@ fi
 
 
 
-#if [[ ! "$1" == *"watch?v="* ]];then
-#	print_color "#9A0800" "ERROR: tag no found: watch?v="
-#	exit
-#fi
-
-#if [[ ! "$1" == *".youtube.com"* ]];then
-#	print_color "#9A0800" "ERROR: tag no found: .youtube.com"
-#	exit
-#fi
-
 USER="$3"
 CODE=$4
 
@@ -81,8 +71,8 @@ print_color "#08088A" "*********************************************************
 
 print_color "#08088A" "Request video information ..."
 
-THUMBNAI="/tmp/$CODE"
-rm -rf "$THUMBNAI"
+THUMBNAI="/tmp/$CODE.jpg"
+rm -rf "$THUMBNAI.jpg"
 youtube-dl --write-thumbnail $LINK -o "$THUMBNAI" > /dev/null &						# background task
 
 FILE_AND_EXTENSION=$(youtube-dl --get-filename $LINK -o "%(title)s.%(ext)s")
@@ -99,7 +89,7 @@ echo "<b style=\"color:#08088A\">File name:</b> <b style=\"color:#009A08\">$FILE
 #-- IF THUMBNAI --
 #if [ -e "$THUMBNAI" ];then
 	MYRAND=$(((RANDOM%100000)+1))
-	echo "<img src='/tmp/$CODE.jpg?$MYRAND' style='width:240px;height:180px'>"
+	echo "<img src='$THUMBNAI.jpg?$MYRAND' style='width:240px;height:180px'>"
 #fi
 #-- IF THUMBNAI --
 
