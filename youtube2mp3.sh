@@ -71,11 +71,12 @@ print_color "#08088A" "*********************************************************
 
 print_color "#08088A" "Request video information ..."
 
-THUMBNAI="/tmp/$CODE.jpg"
-rm -rf "$THUMBNAI.jpg"
-youtube-dl --write-thumbnail $LINK -o "$THUMBNAI" > /dev/null &						# background task
+THUMBNAI="/tmp/$CODE"
+rm -rf "/tmp/$CODE*"
 
-FILE_AND_EXTENSION=$(youtube-dl --get-filename $LINK -o "%(title)s.%(ext)s")
+youtube-dl --skip-download --write-thumbnail $LINK -o "$THUMBNAI" && mv "$THUMBNAI.webp" "$THUMBNAI.jpg" > /dev/null &						# background task
+
+FILE_AND_EXTENSION=$(youtube-dl --skip-download --get-filename $LINK -o "%(title)s.%(ext)s")
 
 if [ $? -ne 0 ];then
 	print_color "#9A0800" "ERROR"
@@ -94,8 +95,8 @@ echo "<b style=\"color:#08088A\">File name:</b> <b style=\"color:#009A08\">$FILE
 #-- IF THUMBNAI --
 
 print_color "#08088A" "Download and conversion ..."
-
 youtube-dl -x --audio-format mp3 $LINK -o "%(title)s.%(ext)s"
+
 
 if [ $? -ne 0 ];then
 	print_color "#9A0800" ""
