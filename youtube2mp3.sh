@@ -164,7 +164,7 @@ fi
 #-- Add INFO+image to mp3 file --
 if [ -e "$THUMBNAI.jpg" ];then	# is tumbnail image exist
 	#print_color "#08088A" "Set info+cover image: ..."		
-	eyeD3 --to-v2.3 --add-image "$THUMBNAI.jpg":OTHER --artist "$ARTIST" --title "$TITLE" "$FULLNAME" #> /dev/null
+	eyeD3 --to-v2.3 --add-image "$THUMBNAI.jpg":OTHER --artist "$ARTIST" --title "$TITLE" "$FULLNAME" > /dev/null
 	if [ $? -eq 0 ];then
 		print_color "#007027" "Set ID3TAG+image cover : OK"	
 	else
